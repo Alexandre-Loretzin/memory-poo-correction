@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="game.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+    </head>
+<body>
+    <header>
+        <h1>Memory game</h1>
+    </header>
+    <section class="score-panel grid">
+        <div class="moves"><span class="nbMoves">0</span>/<span class="maxMoves"></span> coups</div>
+
+        <div class="timer"></div>
+        <div>
+            <button id="restart" onclick="game.playAgain()">Rejouer</button>
+        </div>
+    </section>
+    <main>
+        <div id="game"> </div>
+    </main>
+    
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <h2>Bravo!</h2>
+            <a class="close" href="#!" onclick="game.closeModal()">×</a>
+            <div class="content">
+                T'es un champion 🎉🎉
+            </div>
+            <div class="content">
+                <span id="finalMoves">0</span> coups en <span id="totalTime"></span>
+            </div>
+            <button id="play-again" onclick="game.playAgain()">Rejouer</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="main.js"></script>
+</html>
